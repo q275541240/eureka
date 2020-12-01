@@ -1,8 +1,8 @@
 node {
 	parameters {
 		string(name: 'BRANCH', defaultValue: 'master', description: 'git分支')
-		string(name: 'CREDENTIALS_ID', defaultValue: 'gitee', description: 'git凭据Id')
-		string(name: 'GIT', defaultValue: 'https://gitee.com/ch1234/eureka.git', description: 'git地址')
+		string(name: 'CREDENTIALS_ID', defaultValue: 'github', description: 'git凭据Id')
+		string(name: 'GIT', defaultValue: 'https://github.com/q275541240/eureka.git', description: 'git地址')
 		string(name: 'CONTAINER_NAME', defaultValue: 'eureka-single', description: '容器名')
 		string(name: 'IMAGE_NAME', defaultValue: 'eureka-single', description: '镜像名')
 		string(name: 'JAR_FILE', defaultValue: 'eureka.jar', description: 'Dockerfile中ARG值')

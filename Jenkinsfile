@@ -13,7 +13,10 @@ node {
 	}
 
 	stage('Pull Code') {
-		git branch: '${BRANCH}', credentialsId: '${CREDENTIALS_ID}', url: '${GIT}'
+		checkout([$class: 'GitSCM', branches: [[name: '*/master']],
+		doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [],
+		userRemoteConfigs: [[credentialsId: '${CREDENTIALS_ID}', url:
+		'${GIT}']]])
 	}
 	stage('Maven Package') {
 		sh '"$MVN_HOME/bin/mvn" -Dmaven.test.failure.ignore clean package'

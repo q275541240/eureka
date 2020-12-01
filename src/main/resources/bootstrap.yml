@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: eureka
+  security:
+    basic:
+      enabled: false
+    user:
+      name: eureka
+      password: 123
